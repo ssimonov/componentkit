@@ -109,7 +109,7 @@ void CKConfigureInvocationWithArguments(NSInvocation *invocation, NSInteger inde
 {
   // We have to be able to handle methods that take less than the provided number of arguments, since that will cause
   // an exception to be thrown.
-  if (index < invocation.methodSignature.numberOfArguments) {
+  if (index < (NSInteger)invocation.methodSignature.numberOfArguments) {
     [invocation setArgument:&t atIndex:index];
     CKConfigureInvocationWithArguments(invocation, index + 1, args...);
   }
