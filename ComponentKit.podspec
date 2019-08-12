@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.1'
   s.tvos.deployment_target = '9.1'
   s.requires_arc = true
-  s.source_files = 'ComponentKit/**/*', 'ComponentTextKit/**/*'
+  s.source_files = 'ComponentKit/**/*.{h,m}', 'ComponentTextKit/**/*.{h,m}'
   s.frameworks = 'UIKit', 'CoreText'
   s.library = 'c++'
   s.xcconfig = {
